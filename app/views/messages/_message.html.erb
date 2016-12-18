@@ -3,7 +3,6 @@
     <%= message.user.username %>:
   </div>
   <div class="message-content">
-    <%= message.content %> 
-    <%= ((0...10).map { ('a'..'z').to_a[rand(26)] }.join) %> 
+    <%= sanitize markdown_to_html(message.content) %>
   </div>
 </div>
